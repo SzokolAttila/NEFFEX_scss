@@ -32,6 +32,12 @@ h1{
     text-shadow: 5px 5px 5px $cyan;
 }
 
+nav{
+    position: fixed !important; 
+    top: 0;
+    width: 100%;
+}
+
 .navbar{
     background-color: $darkcyan !important;
 
@@ -84,6 +90,7 @@ h2{
 }
 
 header{
+    margin-top: 50px;
     height: 350px;
     background-image: url('../img/banner.jpg');
     background-position: center;
