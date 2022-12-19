@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik+Spray+Paint&display=swap");
 body {
-  color: #141e26;
+  color: #cbd8df;
   background-color: #9ac5d3;
 }
 
@@ -8,9 +8,11 @@ h1 {
   text-align: center;
   letter-spacing: 5px;
   margin-top: 50px;
+  margin-bottom: 50px;
   font-size: 500%;
   color: #141e26;
   font-family: "Rubik Spray Paint", cursive;
+  text-shadow: 5px 5px 5px #159ab7;
 }
 
 .navbar {
@@ -21,17 +23,44 @@ h1 {
 }
 .navbar a:hover {
   color: #141e26;
+  background-color: #159ab7;
+  transition: all 0.4s;
+  border-radius: 3px;
+  box-shadow: 2px 2px 2px #141e26;
+}
+
+p {
+  text-align: justify;
+}
+
+main {
+  margin-bottom: 100px;
 }
 
 footer {
   background-color: #1e5067;
-  position: absolute;
+  position: fixed;
   bottom: 0;
+  height: 60px;
 }
 footer p {
   text-align: center;
   padding: 20px 20px 0px 20px;
   color: #cbd8df;
+}
+
+h2 {
+  display: block;
+  margin: auto;
+  background-color: #159ab7;
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  padding: 10px 10px 10px 20px;
+  font-variant: small-caps;
+  font-family: "Rubik Spray Paint", cursive;
+  font-size: 300%;
+  box-shadow: 5px 5px 5px #141e26;
 }
 
 header {
@@ -41,11 +70,136 @@ header {
   background-size: cover;
 }
 
-header:hover {
+.card {
+  background-color: #159ab7;
+  margin-top: 25px;
+  box-shadow: 7px 7px 5px #9ac5d3;
+}
+
+.row:nth-of-type(1) {
+  background-color: #192630;
+}
+
+.row:nth-of-type(2) {
+  background-color: #1f2e3a;
+}
+
+.row:nth-of-type(3) {
+  background-color: #243644;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  transition: all 0.5s;
+}
+
+h5 {
+  text-align: center;
+}
+
+.btn {
+  display: block;
+  margin: auto;
+  background-color: #1e5067;
+  border: thin #141e26;
+  color: #cbd8df;
+  font-variant: small-caps;
+}
+
+.intro:hover {
+  transform: translate(0px, 20px) scale(1.1);
+  transition: all 1s;
+  box-shadow: -5px -5px 10px #1e5067;
+}
+
+.btn:hover {
+  background-color: #141e26;
+  transform: scale(1.05);
+  transition: all 0.7s;
+}
+
+a img {
+  border: none;
+}
+
+img {
+  display: block;
+  margin: auto;
+  border: #9ac5d3 5px solid;
+  border-radius: 3px;
+}
+
+img:hover {
   -webkit-animation: shake 0.5s infinite;
           animation: shake 0.5s infinite;
 }
 
+.row {
+  width: 90%;
+  background-color: #141e26;
+  margin: auto;
+  margin-top: 20px;
+  padding: 25px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px #159ab7;
+}
+
+@media only screen and (max-width: 1600px) {
+  header {
+    height: 348px;
+  }
+}
+@media only screen and (max-width: 1500px) {
+  header {
+    height: 325px;
+  }
+}
+@media only screen and (max-width: 1400px) {
+  header {
+    height: 302px;
+  }
+}
+@media only screen and (max-width: 1300px) {
+  header {
+    height: 279px;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  header {
+    height: 256px;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  header {
+    height: 233px;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  header {
+    height: 210px;
+  }
+}
+@media only screen and (max-width: 900px) {
+  header {
+    height: 187px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  header {
+    height: 164px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  header {
+    height: 141px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  header {
+    height: 118px;
+  }
+}
 @-webkit-keyframes shake {
   0% {
     transform: translate(1px, 1px) rotate(0deg);
@@ -81,7 +235,6 @@ header:hover {
     transform: translate(1px, -2px) rotate(-1deg);
   }
 }
-
 @keyframes shake {
   0% {
     transform: translate(1px, 1px) rotate(0deg);

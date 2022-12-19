@@ -6,8 +6,18 @@ $darkcyan: #1e5067;
 
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Spray+Paint&display=swap');
 
+@mixin center {
+    display: block;
+    margin: auto;
+}
+
+@function pickColor ($color, $multiplier) {
+    @return lighten($color, $multiplier * 3%);
+}
+
+
 body{
-    color: $darkblue;
+    color: $lightgray;
     background-color: $lightblue;
 }
 
@@ -15,9 +25,11 @@ h1{
     text-align: center;
     letter-spacing: 5px;
     margin-top: 50px;
+    margin-bottom: 50px;
     font-size: 500%;
     color: $darkblue;
     font-family: 'Rubik Spray Paint', cursive;
+    text-shadow: 5px 5px 5px $cyan;
 }
 
 .navbar{
@@ -29,19 +41,46 @@ h1{
 
     & a:hover{
         color: $darkblue;
+        background-color: $cyan;
+        transition: all .4s;
+        border-radius: 3px;
+        box-shadow: 2px 2px 2px $darkblue;
     }
+}
+
+p{
+    text-align: justify;
+}
+
+main{
+    margin-bottom: 100px;
 }
 
 footer{
     background-color: $darkcyan;
-    position: absolute;
+    position: fixed;
     bottom: 0;
+    height: 60px;
 
     & p{
         text-align: center;
         padding: 20px 20px 0px 20px;
         color: $lightgray;
     }
+}
+
+h2{
+    @include center;
+
+    background-color: $cyan;
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    padding: 10px 10px 10px 20px;
+    font-variant: small-caps;
+    font-family: 'Rubik Spray Paint', cursive;
+    font-size: 300%;
+    box-shadow: 5px 5px 5px $darkblue;
 }
 
 header{
@@ -51,8 +90,80 @@ header{
     background-size: cover;
 }
 
-header:hover{
+.card{
+    background-color: $cyan;
+    margin-top: 25px;
+    box-shadow: 7px 7px 5px $lightblue;
+}
+
+@for $i from 1 through 3{
+    .row:nth-of-type(#{$i}){
+        background-color:  pickColor($darkblue, $i);
+    }
+}
+
+.card:hover{
+    transform: scale(1.05);
+    transition: all 0.5s;
+}
+
+h5{
+    text-align: center;
+}
+
+.btn{
+    @include center;
+    background-color: $darkcyan;
+    border: thin $darkblue;
+    color: $lightgray;
+    font-variant: small-caps;
+}
+
+.intro:hover{
+    transform: translate(0px, 20px) scale(1.1);
+    transition: all 1s;
+    box-shadow: -5px -5px 10px $darkcyan;
+}
+
+.btn:hover{
+    background-color: $darkblue;
+    transform: scale(1.05);
+    transition: all 0.7s;
+}
+
+a img{
+    border: none;
+}
+
+img{
+    @include center;
+    border: $lightblue 5px solid;
+    border-radius: 3px;
+}
+
+img:hover{
     animation: shake 0.5s infinite;
+}
+
+.row{
+    width: 90%;
+    background-color: $darkblue;
+    margin: auto;
+    margin-top: 20px;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    box-shadow:5px 5px 5px $cyan;
+}
+
+@for $i from 16 through 6 {
+    $curr: $i * 100px;
+    $currheight: $i * 22 - (20 - $i) + 0px;
+    @media only screen and (max-width: $curr) {
+        header{
+            height: $currheight;
+        }
+    }
 }
 
 @keyframes shake {
@@ -68,3 +179,4 @@ header:hover{
     90% { transform: translate(1px, 2px) rotate(0deg); }
     100% { transform: translate(1px, -2px) rotate(-1deg); }
   }
+
