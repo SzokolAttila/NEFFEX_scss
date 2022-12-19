@@ -1,0 +1,34 @@
+$lightblue: #9ac5d3;
+$darkblue: #141e26;
+$lightgray: #cbd8df;
+$cyan: #159ab7;
+$darkcyan: #1e5067;
+
+body{
+    color: $darkblue;
+    background-color: $lightblue;
+}
+
+.navbar{
+    background-color: $darkcyan !important;
+
+    & a{
+        color: $lightgray;
+    }
+
+    & a:hover{
+        color: $darkblue;
+    }
+}
+
+footer{
+    background-color: $darkcyan;
+    position: absolute;
+    bottom: 0;
+
+    & p{
+        text-align: center;
+        padding: 20px 20px 0px 20px;
+        color: $lightgray;
+    }
+}

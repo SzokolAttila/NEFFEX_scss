@@ -1,0 +1,25 @@
+body {
+  color: #141e26;
+  background-color: #9ac5d3;
+}
+
+.navbar {
+  background-color: #1e5067 !important;
+}
+.navbar a {
+  color: #cbd8df;
+}
+.navbar a:hover {
+  color: #141e26;
+}
+
+footer {
+  background-color: #1e5067;
+  position: absolute;
+  bottom: 0;
+}
+footer p {
+  text-align: center;
+  padding: 20px 20px 0px 20px;
+  color: #cbd8df;
+}/*# sourceMappingURL=style.css.map */
